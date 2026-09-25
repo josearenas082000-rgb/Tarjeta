@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Evita barras de desplazamiento laterales por las imágenes grandes */
+}
+
+/* --- ESTILOS PARA EL VIDEO DE FONDO --- */
+.img-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Hace que el video cubra toda la pantalla sin deformarse */
+    z-index: -1; /* Lo manda al fondo de todo para que no tape la tarjeta */
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    z-index: 1; /* Asegura que la tarjeta esté por encima del video */
+}
+
+.tarjeta-flotante {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 550px;
+    background-color: #f4efe6; 
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra un poco más oscura para que resalte sobre el video */
+    padding: 40px 30px;
+    overflow: visible; 
+    
+    background-image: linear-gradient(#d6c9b5 1px, transparent 1px);
+    background-size: 100% 30px;
+}
+
+.contenido-texto h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.contenido-texto p {
+    font-size: 15px;
+    color: #444;
+    line-height: 30px; 
+}
+
+.recorte {
+    position: absolute;
+    filter: drop-shadow(3px 5px 4px rgba(0, 0, 0, 0.3));
+    z-index: 10;
+}
+
+.sticker-top {
+    top: -100px;
+    left: -100px;
+    width: 150px;
+    transform: rotate(-10deg);
+}
+
+.sticker-yakult {
+    top: 180px;
+    left: -110px;
+    width: 150px; /* Corregido (tenías 200x) */
+    transform: rotate(-5deg);
+}
+
+.sticker-cat1 {
+    bottom: 5px;
+    left: -20px;
+    width: 120px;
+    transform: rotate(8deg);
+}
+
+.sticker-banana {
+    top: 400px;
+    right: -50px;
+    width: 190px;
+    transform: rotate(15deg);
+}
+
+.kaleth-morales {
+    top: -50px;
+    right: -150px;
+    width: 200px;
+    transform: rotate(-10deg);
+}
+
+.kaleth {
+    top: 150px;
+    right: -400px;
+    width: 400px;
+    transform: rotate(-5deg);
+}
+
+.kaleth2 {
+    top: 140px;
+    left: -400px;
+    width: 400px;
+    transform: rotate(8deg);
+}
+
+.kaleth3 {
+    top: 500px;
+    right: -400px; /* Corregido (faltaba px) */
+    width: 350px;
+    transform: rotate(15deg);
+}
